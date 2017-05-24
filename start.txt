@@ -1,0 +1,25 @@
+To start a new project using this skeleton:
+
+0- If you don´t understand something run to the documentation 
+1- $ cd skeleton
+2- Configure settings.py inside config folder to feet your needs
+3- python manage.py migrate
+4- python manage.py createsuperuser
+5- python manage.py collectstatic
+6- python manage.py runserver
+7- Finish!
+
+After templating/programming, do step 5, to collectstatic and then run
+step 6 to test what you have done...
+
+You need to change the SECRET_KEY on the newproject everytime. To do that, 
+type the following in a python console:
+
+>>> import django
+>>> from django.utils.crypto import get_random_string
+>>> chars = ‘abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)’
+>>> key_string = get_random_string(50, chars)
+>>> print key_string
+b9b%j-ru9#wwh%oasd_8gq&028#n^s554ymln(pyiyn8*hbm29
+
+Where key_string[in this example] is the new generated value for SECRET_KEY.
